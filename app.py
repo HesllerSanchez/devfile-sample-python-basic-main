@@ -3,7 +3,7 @@ import os
 #import database as db
 
 template_dir = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-template_dir = os.path.join(template_dir, 'src', 'templates')
+template_dir = os.path.join(template_dir,'templates')
 
 app = Flask(__name__, template_folder = template_dir)
 
