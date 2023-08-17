@@ -69,55 +69,7 @@
                     </thead>
                 
                 <tbody>
-                    {% for d in data %}
-                        <tr>
-                            <td>{{d.IdProducto}}</td>
-                            <td>{{d.NombreProducto}}</td>
-                            <td><img src="{{d.Imagen }}" alt="Imagen del producto" width="150px"></td>
-                           
-                            <td>{{d.Marca}}</td>
-                            <td>{{d.Descripcion}}</td>
-                            <td>{{d.Talla}}</td>
-                            <td>{{d.PrecioUnitario}}</td>
-                            <td><button class="btn btn-primary btn-sm" id="btn-edit{{d.IdProducto}}" data-bs-toggle="modal" data-bs-target="#modal{{d.IdProducto}}">Edit</button></td>
-                            <td><a href="{{url_for('delete', id=d.IdProducto)}}" class="btn btn-danger btn-sm">Delete</a></td>
-                        </tr>
-
-                        <!-- modal -->
-
-                        <div class="modal fade" id="modal{{d.IdProducto}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">{{d.NombreProducto}}</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="/edit/{{d.IdProducto}}" method="post">
-                                        <label>Producto</label>
-                                        <input type="text" class="form-control mb-3" name="NombreProducto" value="{{d.NombreProducto}}">
-                                        <label>Imagen</label>
-                                        <input type="text" class="form-control mb-3" name="Imagen" value="{{d.Imagen}}">
-                                        <label>Marca</label>
-                                        <input type="text" class="form-control mb-3" name="Marca" value="{{d.Marca}}">
-                                        <label>Descripcion</label>
-                                        <input type="text" class="form-control mb-3" name="Descripcion" value="{{d.Descripcion}}">
-                                        <label>Talla</label>
-                                        <input type="text" class="form-control mb-3" name="Talla" value="{{d.Talla}}">
-                                        <label>Precio Unit</label>
-                                        <input type="text" class="form-control mb-3" name="PrecioUnitario" value="{{d.PrecioUnitario}}">
-                                  
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="submit" class="btn btn-primary">Save changes</button>
-                                </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-
-
-                    {% endfor %}
+                    <h1>Hola</h1>
 
                 </tbody>
 
